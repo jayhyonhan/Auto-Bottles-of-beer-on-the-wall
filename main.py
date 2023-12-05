@@ -11,6 +11,6 @@ def wait_for_paste():
 start_int = int(input("Starting number: "))
 
 while start_int > 0:
-    pyperclip.copy(f"{start_int} bottles of beer on the wall, {start_int} of beer take one down, pass it around, {start_int-1} bottles of beer on the wall")
+    pyperclip.copy(f"{start_int} bottles of beer on the wall, {start_int} bottles of beer. You take one down, pass it around {start_int-1} bottles of beer on the wall")
     wait_for_paste()
     start_int -= 1
