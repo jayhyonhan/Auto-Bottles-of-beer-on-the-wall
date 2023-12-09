@@ -1,11 +1,13 @@
 import pyperclip, keyboard
 
 def wait_for_paste():
-    while not(keyboard.is_pressed("ctrl+v")):
-        pass
+    keyboard.wait("ctrl+v")
     print("paste detected!")
-    while not(keyboard.is_pressed("enter")):
-        pass
+    pyperclip.copy("")
+    wait_for_enter()
+
+def wait_for_enter():
+    keyboard.wait("enter")
     print("message sent!")
 
 start_int = int(input("Starting number: "))
